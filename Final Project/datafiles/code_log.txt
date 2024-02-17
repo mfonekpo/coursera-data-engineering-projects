@@ -1,0 +1,20 @@
+2024-Feb-17-12:10:09,ETL Job Started...
+2024-Feb-17-12:10:09,Extract phase Started
+2024-Feb-17-12:10:10,Extract phase Ended
+2024-Feb-17-12:10:10,Transform phase Started
+2024-Feb-17-12:10:10,Transform phase Ended
+2024-Feb-17-12:10:10,Load phase Started
+2024-Feb-17-12:10:10,Loading file to csv
+2024-Feb-17-12:10:10,Loading file to database
+2024-Feb-17-12:10:10,Load phase Ended
+2024-Feb-17-12:10:10,ETL Job Ended
+2024-Feb-17-12:11:17,ETL Job Started...
+2024-Feb-17-12:11:17,Extract phase Started
+2024-Feb-17-12:11:18,Extract phase Ended
+2024-Feb-17-12:11:18,Transform phase Started
+2024-Feb-17-12:11:18,Transform phase Ended
+2024-Feb-17-12:11:18,Load phase Started
+2024-Feb-17-12:11:18,Loading file to csv
+2024-Feb-17-12:11:18,Loading file to database
+2024-Feb-17-12:11:18,Load phase Ended
+2024-Feb-17-12:11:18,ETL Job Ended
