@@ -59,3 +59,12 @@ This script defines an ETL (Extract, Transform, Load) pipeline that extracts dat
 # Customization:
 - The URL, database name, table name, and output CSV path can be customized as per requirements.
 - The exchange rates used in the transformation can be updated based on the latest rates.
+
+# Authors
+Mfon Nsikak Ekpo @mfonekpo
+
+
+# Version History
+0.1
+Various bug fixes and optimizations
+See commit change or release history
