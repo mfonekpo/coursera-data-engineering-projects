@@ -76,6 +76,48 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </section>
 </section>
+<section id="largest-banks-etl-pipeline" class="level1">
+<h1>Largest Banks ETL Pipeline</h1>
+<p>This script defines an ETL (Extract, Transform, Load) pipeline that extracts data about the largest banks from Wikipedia, transforms the data by converting market capitalization figures to different currencies, and loads the transformed data into a SQLite database and a CSV file.</p>
+</section>
+<section id="requirements" class="level1">
+<h1>Requirements:</h1>
+<ul>
+<li>Python 3.x</li>
+<li>Prefect: For orchestrating the ETL tasks and flows.</li>
+<li>Requests: For making HTTP requests to retrieve the web page.</li>
+<li>BeautifulSoup4: For parsing the HTML content of the web page.</li>
+<li>Pandas: For data manipulation and analysis.</li>
+<li>SQLite3: For storing the transformed data in a database.</li>
+<li>NumPy: For numerical operations (if required).</li>
+</ul>
+</section>
+<section id="structure" class="level1">
+<h1>Structure:</h1>
+<ul>
+<li>The pipeline is divided into tasks using Prefect’s <code>@task</code> decorator, making it modular and easy to manage.</li>
+<li>The <code>extract</code> task fetches and parses the webpage to extract relevant data about the banks.</li>
+<li>The <code>transform</code> task processes this data, converting market capitalization figures from USD to GBP, EUR, and INR.</li>
+<li>The <code>load_to_csv</code> task writes the transformed data to a CSV file.</li>
+<li>The <code>load_to_db</code> task inserts the data into a SQLite database.</li>
+<li>The <code>main_flow</code> function orchestrates these tasks into a coherent flow that represents the entire ETL process.</li>
+</ul>
+</section>
+<section id="usage" class="level1">
+<h1>Usage:</h1>
+<ul>
+<li>Ensure all dependencies are installed.</li>
+<li>Run the script directly, and it will execute the ETL pipeline using Prefect: <code>python banks_project_pipeline.py</code></li>
+<li>The results will be saved in the specified database and CSV file within the <code>datafiles</code> directory.</li>
+</ul>
+</section>
+<section id="customization" class="level1">
+<h1>Customization:</h1>
+<ul>
+<li>The URL, database name, table name, and output CSV path can be customized as per requirements.</li>
+<li>The exchange rates used in the transformation can be updated based on the latest rates.</li>
+</ul>
+</section>
 
 </main>
 <!-- /main column -->

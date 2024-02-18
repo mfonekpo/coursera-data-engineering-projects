@@ -28,3 +28,34 @@ Your boss asked you to compile the list of the top 10 largest banks in the world
 
 6. Write a function to log the progress of the code.
 While executing the data initialization commands and function calls, maintain appropriate log entries.
+
+
+# Largest Banks ETL Pipeline
+
+This script defines an ETL (Extract, Transform, Load) pipeline that extracts data about the largest banks from Wikipedia, transforms the data by converting market capitalization figures to different currencies, and loads the transformed data into a SQLite database and a CSV file.
+
+# Requirements:
+- Python 3.x
+- Prefect: For orchestrating the ETL tasks and flows.
+- Requests: For making HTTP requests to retrieve the web page.
+- BeautifulSoup4: For parsing the HTML content of the web page.
+- Pandas: For data manipulation and analysis.
+- SQLite3: For storing the transformed data in a database.
+- NumPy: For numerical operations (if required).
+
+# Structure:
+- The pipeline is divided into tasks using Prefect's `@task` decorator, making it modular and easy to manage.
+- The `extract` task fetches and parses the webpage to extract relevant data about the banks.
+- The `transform` task processes this data, converting market capitalization figures from USD to GBP, EUR, and INR.
+- The `load_to_csv` task writes the transformed data to a CSV file.
+- The `load_to_db` task inserts the data into a SQLite database.
+- The `main_flow` function orchestrates these tasks into a coherent flow that represents the entire ETL process.
+
+# Usage:
+- Ensure all dependencies are installed.
+- Run the script directly, and it will execute the ETL pipeline using Prefect: `python banks_project_pipeline.py`
+- The results will be saved in the specified database and CSV file within the `datafiles` directory.
+
+# Customization:
+- The URL, database name, table name, and output CSV path can be customized as per requirements.
+- The exchange rates used in the transformation can be updated based on the latest rates.
